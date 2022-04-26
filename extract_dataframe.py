@@ -85,7 +85,8 @@ class TweetDfExtractor:
         return retweet_count
 
     def find_hashtags(self)->list:
-        hashtags =
+        hashtags = self.tweets_list['entities']['hashtags']
+        return hashtags
 
     def find_mentions(self)->list:
         mentions = 
