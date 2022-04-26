@@ -43,9 +43,10 @@ class TweetDfExtractor:
         return text
        
     
-    def find_sentiments(self, text)->list:
-        
-        return polarity, self.subjectivity
+    def find_sentiments(self, text):
+        polarity = TextBlob(text).sentiment.polarity
+        subjectivity = TextBlob(text).sentiment.subjectivity
+        return polarity, subjectivity
 
     def find_created_time(self)->list:
        
